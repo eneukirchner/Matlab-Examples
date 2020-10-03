@@ -1,1 +1,2 @@
-# Matlab-Examples
+# Matlab-Examples 
+Various classroom assignments
