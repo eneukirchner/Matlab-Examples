@@ -1,5 +1,3 @@
-% Chapter 3 Code Snippets
-
 %% Scatter plot example 2or QPSK or BPSK
 N = 160; %number of symbols
 M = 4; %4=QPSK or 2=BPSK
