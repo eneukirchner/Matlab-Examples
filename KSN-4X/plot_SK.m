@@ -1,4 +1,6 @@
-    function plot_SK(x,varargin)
+function plot_SK(x,varargin)
+%% Andreas Tautscher BULME
+
 %% Shift Keying Darstellung
 
 %% Variablen
