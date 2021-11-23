@@ -3,8 +3,10 @@
 ## Amplitudenmodulation (AM)
 https://www.elektroniktutor.de/signalkunde/am.html
 
-## Frequenzmodulation
-https://www.elektroniktutor.de/signalkunde/fm.html
+## Frequenzmodulation (FM)
+https://www.elektroniktutor.de/signalkunde/fm.html  
+Suche dir die Formel zur Frequenzmodulation aus dem Grundlagenartikel heraus.  
+*Tipp: Für das in der Formel vorkommende Integral verwende die Funktion `cumsum(x)` in Matlab.*
 
 ## Digitale Modulationsarten
 
@@ -12,7 +14,7 @@ https://www.elektroniktutor.de/signalkunde/fm.html
 
 Bei den hier besprochenen digitalen Modulationsarten ist der Träger stets analog (d.h. sinusförmig), das Basisbandsignal dagegen digital. Der Einfachheit halber simulieren wir mit einer Zeichenfolge 10101010..., dadurch ergibt sich ein Rechtecksignal. Dafür gibt es eine eigene Matlab-Funktion:
 
-```m
+```
 ub=square(2*pi*fb*t);
 ```
 
@@ -21,7 +23,7 @@ Das Problem dabei: Ein ideales Rechtecksignal hat unendlich steile Flanken und s
 - Verwendung einer Fourier-Reihe anstelle der Funktion square, wobei man beispielsweise nach dem dritten Reihenglied abbricht
 - Filterung mittels Tiefpass:
 
-```m
+```
 LPF_ASK=designfilt('lowpassfir', 'PassbandFrequency', 2000, 'StopbandFrequency', 4000, 'PassbandRipple', 1, 'StopbandAttenuation', 80, 'SampleRate', fs); 
  
 ub=filter(LPF_ASK,ub);
@@ -38,7 +40,7 @@ Dieses Signal wird ähnlich wie OOK erzeugt, allerdings wird einem der beiden Lo
 
 ### Details Frequency Shift Keying (FSK)
 Den beiden Logikzuständen des Basisbandsignals (Amplitude -1 ... +1) werden zwei Kennfrequenzen des modulierten Signals zugewiesen. Der Abstand der Kennfrequenzen voneinander heißt Frequenzhub (delta_f):
-```m
+```
 delta_f=0.1; 
 um = cos(2*pi*t*fc.*(1 + delta_f*ub));
 ```
