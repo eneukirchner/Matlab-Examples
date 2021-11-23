@@ -35,6 +35,7 @@ Im ersten Durchgang verwenden wir nur zweiwertige Modulationsarten, ein Übertra
 ### Details Amplitude Shift Keying (ASK)
 https://www.elektroniktutor.de/signalkunde/ask.html  
 Life-Beispiel: https://www.youtube.com/watch?v=WqAqPEXZs-Q&t=17380s  
+ 
 Meist wird diese Modulationsart als reines On-Off-Keying (OOK) realisiert, dabei wird beispielsweise dem Logikzustand 0 der Wert "off" und dem Logikzustand 1 der Wert "on" zugeordnet. Zur Erzeugung des OOK-Signals wird das Trägersignal uc mit dem Basisbandsignal ub multipliziert, welches eine Amplitude zwischen 0 und 1 aufweist.
 
 ### Details Binary Phase Shift Keying (BPSK)
