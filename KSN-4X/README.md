@@ -18,9 +18,9 @@ Bei den hier besprochenen digitalen Modulationsarten ist der Träger stets analo
 ub=square(2*pi*fb*t);
 ```
 
-Das Problem dabei: Ein ideales Rechtecksignal hat unendlich steile Flanken und somit auch ein unendlich breites Fourierspektrum. Real ist so etwas nicht möglich, außerdem entsteht bei der Simulation ein asymmetrisches Spektrum aufgrund von Aliasing-Fehlern - das Shannon-Theorem wird verletzt. Um die Flankensteilheit zu verringern, gibt es zwei Möglichkeiten:
+Das Problem dabei: Ein ideales Rechtecksignal `square(x)` hat unendlich steile Flanken und somit auch ein unendlich breites Fourierspektrum. Real ist so etwas nicht möglich, außerdem entsteht bei der Simulation ein asymmetrisches Spektrum aufgrund von Aliasing-Fehlern - das Shannon-Theorem wird verletzt. Um die Flankensteilheit zu verringern, gibt es zwei Möglichkeiten:
 
-- Verwendung einer Fourier-Reihe anstelle der Funktion square, wobei man beispielsweise nach dem dritten Reihenglied abbricht
+- Verwendung einer Fourier-Reihe anstelle der Funktion `square(x)`, wobei man beispielsweise nach dem dritten Reihenglied abbricht
 - Filterung mittels Tiefpass:
 
 ```
@@ -33,12 +33,15 @@ Die Parameter müssen passend zu den bearbeiteten Signalen gewählt werden. Erkl
 Im ersten Durchgang verwenden wir nur zweiwertige Modulationsarten, ein Übertragungsschritt des modulierten Signals enthält ein Bit.
 
 ### Details Amplitude Shift Keying (ASK)
+https://www.elektroniktutor.de/signalkunde/ask.html  
 Meist wird diese Modulationsart als reines On-Off-Keying (OOK) realisiert, dabei wird beispielsweise dem Logikzustand 0 der Wert "off" und dem Logikzustand 1 der Wert "on" zugeordnet. Zur Erzeugung des OOK-Signals wird das Trägersignal uc mit dem Basisbandsignal ub multipliziert, welches eine Amplitude zwischen 0 und 1 aufweist.
 
 ### Details Binary Phase Shift Keying (BPSK)
+https://www.elektroniktutor.de/signalkunde/pm.html  
 Dieses Signal wird ähnlich wie OOK erzeugt, allerdings wird einem der beiden Logikzustände eine Phasendrehung von 180° zugeordnet. Daher muss das Basisbandsignal ub Amplitudenwerte zwischen -1 (logisch 0) und +1 (logisch 1) aufweisen.
 
 ### Details Frequency Shift Keying (FSK)
+https://www.elektroniktutor.de/signalkunde/fsk.html  
 Den beiden Logikzuständen des Basisbandsignals (Amplitude -1 ... +1) werden zwei Kennfrequenzen des modulierten Signals zugewiesen. Der Abstand der Kennfrequenzen voneinander heißt Frequenzhub (delta_f):
 ```
 delta_f=0.1; 
