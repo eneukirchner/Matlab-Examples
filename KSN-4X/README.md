@@ -1,4 +1,6 @@
 # Beispiele zur Modulation
+## Zusammenfassung mit grafischen Animationen
+https://www.elttam.com/blog/intro-sdr-and-rf-analysis/
 
 ## Amplitudenmodulation (AM)
 https://www.elektroniktutor.de/signalkunde/am.html
@@ -7,6 +9,9 @@ https://www.elektroniktutor.de/signalkunde/am.html
 https://www.elektroniktutor.de/signalkunde/fm.html  
 Suche dir die Formel zur Frequenzmodulation aus dem Grundlagenartikel heraus.  
 *Tipp: Für das in der Formel vorkommende Integral verwende die Funktion `cumsum(x)` in Matlab.*
+
+Stereo-Multiplex-Signal:  
+https://www.st-andrews.ac.uk/~www_pa/Scots_Guide/RadCom/part21/page1.html
 
 ## Digitale Modulationsarten
 
